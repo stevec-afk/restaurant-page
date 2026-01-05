@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "A restaurant page for TOP",
+  "homepage": "https://github.com/stevec-afk/restaurant-page#readme",
+  "bugs": {
+    "url": "https://github.com/stevec-afk/restaurant-page/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevec-afk/restaurant-page.git"
+  },
+  "license": "MIT",
+  "author": "stevec",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.5",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
