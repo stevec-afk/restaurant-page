@@ -1,0 +1,92 @@
+html { 
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #1B191A;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/restaurant-background.jpg) no-repeat center 80% / cover;
+    z-index: -1;
+    opacity: 0.4; 
+}
+
+nav {
+    /* margin: 1.5rem 0; */
+}
+
+nav button {
+    padding-top: 1.5rem;
+    margin: 0 0.5rem;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.15em;
+    cursor: pointer; 
+    border-bottom: 2px solid transparent;
+}
+
+nav button:hover {
+    border-bottom: 2px solid #CCAB5B;
+}
+
+#content {
+    height:90%;
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;} 
+}
+
+#home {
+    display: grid;
+    grid-template-rows: 36% min-content 13% 1fr;
+    justify-items: center;
+    position: relative;
+    font-size: 5rem;
+    top: 5rem;
+}
+
+#home h2 {
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    color: #CCAB5B;
+    line-height: 5rem;
+}
+
+#home h1 {
+    font-size: 4rem;
+    border-bottom: 4px solid #CCAB5B;
+    padding: 10px 0;
+}
+
+#home p {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    font-weight: 400;
+}
