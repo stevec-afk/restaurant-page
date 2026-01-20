@@ -6,6 +6,7 @@ import { renderMenu } from "./menu.js";
 
 
 const $content = document.getElementById("content");
+const $navbar = document.getElementById("navbar");
 
 // Funciton to create HTML elements easier
 function createHtmlElement (type, content, classes, id){ 
@@ -18,15 +19,23 @@ function createHtmlElement (type, content, classes, id){
 }
 
 // Event listner handler to see which menu item was clicked
-document.addEventListener("click", (e) => {
+$navbar.addEventListener("click", (e) => {
     const target = e.target.innerText;
 
-    $content.innerHTML = "";
     switch (target) {
-        case "HOME": renderHome();
-        case "MENU": renderAboutus();
-        case "ABOUT US": renderContact();
-        case "CONTACT": renderMenu();
+        case "HOME": 
+            renderHome();
+            break;
+        case "MENU": 
+            renderMenu();
+            break;
+        case "ABOUT US": 
+            renderAboutus();
+            break;
+        case "CONTACT": 
+            renderContact();
+            break;
+        default: break;
     } 
 });
 
