@@ -3,7 +3,7 @@ import { $content, createHtmlElement } from "./index.js";
 // (type, content, classes, id)
 
 function render() {
-    const $home = createHtmlElement("div", undefined, undefined, "home");
+    const $home = createHtmlElement("div", undefined, undefined, "logo");
     const $h2 = createHtmlElement("h2", "Steve's");
     const $h1 = createHtmlElement("h1", "Catering");
     const $tagline = createHtmlElement("p", "Great food, locally sourced.");

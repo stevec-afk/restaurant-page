@@ -1,4 +1,4 @@
-/* Default / page-wide styles */
+/* Default page-wide styles */
 
 html { 
     box-sizing: border-box;
@@ -42,7 +42,7 @@ nav button {
     background: none;
     border: none;
     font-family: inherit;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #fff;
     letter-spacing: 0.15em;
     cursor: pointer; 
@@ -53,9 +53,9 @@ nav button:hover {
     border-bottom: 2px solid #CCAB5B;
 }
 
-/* applies animation fade-in to any children under #content */
+/* Applies animation fade-in to any children under #content */
 
-#content > *{
+#content > * {
     height:90%;
     animation: fadeIn .5s;
 }
@@ -65,32 +65,45 @@ nav button:hover {
     100% {opacity: 1;} 
 }
 
-/* Home page styles */
+/* Styles for the logo (with small variant) */
 
-#home {
+#logo {
     display: grid;
     grid-template-rows: 36% min-content 13% 1fr;
     justify-items: center;
     position: relative;
-    font-size: 5rem;
     top: 5rem;
+    font-size: 10rem;
+
+    &:has(.small) {
+        top: 2rem;
+    }
+
+    & > h2 {
+        font-family: 'Sacramento', cursive;
+        font-weight: 400;
+        color: #CCAB5B;
+        line-height: .6em;
+        font-size: 1em;
+        &.small {
+            font-size: .5em;
+        }
+    }
+    & > h1 {
+        border-bottom: 4px solid #CCAB5B;
+        padding: 10px 0;
+        font-size: .5em;
+        &.small {
+            font-size: .25em;
+            border-bottom: none;
+        }
+    }
+    & > p {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: .16em;
+    }
 }
 
-#home h2 {
-    font-family: 'Sacramento', cursive;
-    font-weight: 400;
-    color: #CCAB5B;
-    line-height: 5rem;
-}
 
-#home h1 {
-    font-size: 4rem;
-    border-bottom: 4px solid #CCAB5B;
-    padding: 10px 0;
-}
-
-#home p {
-    font-size: 1.6rem;
-    margin-top: 20px;
-    font-weight: 400;
-}
+/* Menu styles */
