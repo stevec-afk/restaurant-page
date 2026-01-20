@@ -1,4 +1,4 @@
-import { $content, createHtmlElement } from "./index.js";
+import { $content, createHtmlElement } from "../index.js";
 
 // (type, content, classes, id)
 

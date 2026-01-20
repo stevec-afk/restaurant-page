@@ -1,8 +1,8 @@
 import "./styles.css";
-import { renderHome } from "./home.js";
-import { renderAboutus } from "./about-us.js";
-import { renderContact } from "./contact.js";
-import { renderMenu } from "./menu.js";
+import { renderHome } from "./pages/home.js";
+import { renderAboutus } from "./pages/about-us.js";
+import { renderContact } from "./pages/contact.js";
+import { renderMenu } from "./pages/menu.js";
 
 
 const $content = document.getElementById("content");
