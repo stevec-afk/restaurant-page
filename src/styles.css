@@ -1,3 +1,5 @@
+/* Default / page-wide styles */
+
 html { 
     box-sizing: border-box;
     font-size: 100%;
@@ -32,9 +34,7 @@ body::before {
     opacity: 0.4; 
 }
 
-nav {
-    /* margin: 1.5rem 0; */
-}
+/* Nav menu styles */
 
 nav button {
     padding-top: 1.5rem;
@@ -53,6 +53,8 @@ nav button:hover {
     border-bottom: 2px solid #CCAB5B;
 }
 
+/* applies animation fade-in to any children under #content */
+
 #content > *{
     height:90%;
     animation: fadeIn .5s;
@@ -62,6 +64,8 @@ nav button:hover {
     0% {opacity: 0;}
     100% {opacity: 1;} 
 }
+
+/* Home page styles */
 
 #home {
     display: grid;

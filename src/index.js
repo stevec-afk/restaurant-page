@@ -11,10 +11,10 @@ const $navbar = document.getElementById("navbar");
 // Funciton to create HTML elements easier
 function createHtmlElement (type, content, classes, id){ 
     const element = document.createElement(type);
+    if (content) element.innerText = content;
     if (id) element.id = id;
     if (classes) classes.foreach((myClass) => element.classList.add(myClass));
-    if (content) element.innerText = content;
-
+    
     return element;
 }
 

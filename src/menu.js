@@ -1,5 +1,7 @@
 import { $content, createHtmlElement } from "./index.js";
 
+// (type, content, classes, id)
+
 function render() {
     $content.innerHTML = "";
     return;
