@@ -8,7 +8,7 @@ import { renderMenu } from "./pages/menu.js";
 const $content = document.getElementById("content");
 const $navbar = document.getElementById("navbar");
 
-// Funciton to create HTML elements easier
+// Helper funciton to create HTML elements easier
 function createHtmlElement (type, content, classes, id){ 
     const element = document.createElement(type);
     if (content) element.innerText = content;

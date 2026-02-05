@@ -8,9 +8,9 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0; 
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0; 
 }
 
 body {
@@ -53,30 +53,38 @@ nav button:hover {
     border-bottom: 2px solid #CCAB5B;
 }
 
+/* Break line styles */
+.breakline {
+    max-width: 600px;
+    border: 1px solid #CCAB5B;
+    margin: 12px auto;
+}
+
 /* Applies animation fade-in to any children under #content */
 
 #content > * {
     height:90%;
     animation: fadeIn .5s;
+    
 }
 
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;} 
 }
-
 /* Styles for the logo (with small variant) */
 
 #logo {
     display: grid;
-    grid-template-rows: 36% min-content 13% 1fr;
+    grid-template-rows: 36% min-content;
+    grid-auto-rows: 1fr;
     justify-items: center;
     position: relative;
-    top: 5rem;
     font-size: 10rem;
+    padding-top: 0.4em;
 
     &:has(.small) {
-        top: 2rem;
+        padding-top: 0.2em;
     }
 
     & > h2 {
@@ -95,15 +103,47 @@ nav button:hover {
         font-size: .5em;
         &.small {
             font-size: .25em;
-            border-bottom: none;
+            /* border-bottom: none; */
         }
     }
     & > p {
         margin-top: 20px;
         font-weight: 400;
         font-size: .16em;
+        &.small {
+            font-size: .32em;
+        }
     }
 }
 
-
 /* Menu styles */
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.menu-item {
+    text-align: left;
+    max-width: 600px;
+    & > h1 {
+        color: #CCAB5B;
+        padding: .50em 0;
+        font-size: 1.75rem;
+    }
+
+    & > h2 {
+        color: #CCAB5B;
+        padding-bottom: .50em;
+    }
+
+    & > p {
+        line-height: 150%;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: left;
+    }
+
+}
