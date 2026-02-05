@@ -1,8 +1,8 @@
 import { $content, createHtmlElement } from "../index.js";
 
-// (type, content, classes, id)
+// createHtmlElement("type", "content", [classes], "id")
 
-function render() {
+function renderHome() {
     const $home = createHtmlElement("div", undefined, undefined, "logo");
     const $h2 = createHtmlElement("h2", "Steve's");
     const $h1 = createHtmlElement("h1", "Catering");
@@ -15,4 +15,4 @@ function render() {
     $content.appendChild($home);
 }
 
-export {render as renderHome};
+export {renderHome};

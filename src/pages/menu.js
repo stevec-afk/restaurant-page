@@ -20,16 +20,21 @@ const menu = [
 
 // createHtmlElement("type", "content", [classes], "id")
 
-function render() {
+function renderLogo() { 
     const $logo = createHtmlElement("div", undefined, undefined, "logo");
     const $h2 = createHtmlElement("h2", "Steve's", ["small"]);
     const $h1 = createHtmlElement("h1", "Catering", ["small"]);
-    const $menu = createHtmlElement("div", undefined, undefined, "menu")
 
-    $content.innerHTML = ""; // Clear content div
     $logo.appendChild($h2);
     $logo.appendChild($h1);
     $content.appendChild($logo);
+}
+
+function renderMenu() {
+    const $menu = createHtmlElement("div", undefined, undefined, "menu")
+
+    $content.innerHTML = ""; // Clear content div
+    renderLogo(); 
 
     menu.forEach((item) => {
         const $div = createHtmlElement("div", undefined, ["menu-item"]);
@@ -49,4 +54,4 @@ function render() {
 
 }
 
-export {render as renderMenu};
+export {renderMenu, renderLogo};

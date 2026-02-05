@@ -1,15 +1,21 @@
 import { $content, createHtmlElement } from "../index.js";
+import {renderLogo} from "./menu.js";
 
-function render() {
-    const $logo = createHtmlElement("div", undefined, undefined, "logo");
-    const $h2 = createHtmlElement("h2", "Steve's", ["small"]);
-    const $h1 = createHtmlElement("h1", "Catering", ["small"]);
-    const $menu = createHtmlElement("div", undefined, undefined, "menu")
+// createHtmlElement("type", "content", [classes], "id")
+
+function renderAboutus() {
+    const $bio = createHtmlElement("div", undefined, undefined, "menu")
+    // const p1 = "";
+    // const p2;
+    // const p3;
+
 
     $content.innerHTML = ""; // Clear content div
-    $logo.appendChild($h2);
-    $logo.appendChild($h1);
-    $content.appendChild($logo);
+    renderLogo();    
+
+
+
+    $content.appendChild($bio);
 }
 
-export {render as renderAboutus};
+export {renderAboutus};
