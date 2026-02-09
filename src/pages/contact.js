@@ -1,11 +1,10 @@
 import { $content, createHtmlElement } from "../index.js";
-import {renderLogo} from "./menu.js";
+import {renderLogo} from "./home.js";
 
 // createHtmlElement("type", "content", [classes], "id")
 
 function renderContact() {
-    $content.innerHTML = ""; // Clear content div
-    renderLogo();
+    renderLogo(true);
 
     const $contact = createHtmlElement("div", undefined, undefined, "contact-container");
 

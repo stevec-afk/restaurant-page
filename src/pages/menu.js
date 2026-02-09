@@ -1,38 +1,38 @@
 import { $content, createHtmlElement } from "../index.js";
-
-const menu = [
-    {
-        name: "Breakfast platter  -  $20",
-        description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem, eget lobortis lectus consequat ut."
-    },
-    {
-        name: "Lunch platter  -  $20",
-        description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem, eget lobortis lectus consequat ut."
-    },
-    {
-        name: "Dinner platter  -  $20",
-        description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem."
-    }
-];
+import {renderLogo} from "./home.js";
 
 // createHtmlElement("type", "content", [classes], "id")
 
-function renderLogo() { 
-    const $logo = createHtmlElement("div", undefined, undefined, "logo");
-    const $h2 = createHtmlElement("h2", "Steve's", ["small"]);
-    const $h1 = createHtmlElement("h1", "Catering", ["small"]);
+// function renderLogo() { 
+//     const $logo = createHtmlElement("div", undefined, undefined, "logo");
+//     const $h2 = createHtmlElement("h2", "Steve's", ["small"]);
+//     const $h1 = createHtmlElement("h1", "Catering", ["small"]);
 
-    $logo.appendChild($h2);
-    $logo.appendChild($h1);
-    $content.appendChild($logo);
-}
+//     $logo.appendChild($h2);
+//     $logo.appendChild($h1);
+//     $content.appendChild($logo);
+// }
 
 function renderMenu() {
-    $content.innerHTML = ""; // Clear content div
-    renderLogo(); 
+    renderLogo(true); 
+
+    const menu = [
+        {
+            name: "Breakfast platter  -  $20",
+            description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem, eget lobortis lectus consequat ut."
+        },
+        {
+            name: "Lunch platter  -  $20",
+            description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem, eget lobortis lectus consequat ut."
+        },
+        {
+            name: "Dinner platter  -  $20",
+            description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fringilla lorem."
+        }
+    ];
 
     const $menu = createHtmlElement("div", undefined, undefined, "menu")
 
@@ -54,4 +54,4 @@ function renderMenu() {
 
 }
 
-export {renderMenu, renderLogo};
+export { renderMenu };

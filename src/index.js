@@ -1,9 +1,8 @@
 import "./styles.css";
-import { renderHome } from "./pages/home.js";
+import { renderLogo } from "./pages/home.js"
 import { renderAboutus } from "./pages/about-us.js";
 import { renderContact } from "./pages/contact.js";
 import { renderMenu } from "./pages/menu.js";
-
 
 const $content = document.getElementById("content");
 const $navbar = document.getElementById("navbar");
@@ -18,13 +17,15 @@ function createHtmlElement (type, content, classes, id){
     return element;
 }
 
-// Event listner handler to see which menu item was clicked
+// Event handler to check which menu item was clicked
 $navbar.addEventListener("click", (e) => {
+    $content.innerHTML = ""; // Clear content div
+
     const target = e.target.innerText;
 
     switch (target) {
         case "HOME": 
-            renderHome();
+            renderLogo();
             break;
         case "MENU": 
             renderMenu();

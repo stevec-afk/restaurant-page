@@ -1,13 +1,12 @@
 import { $content, createHtmlElement } from "../index.js";
-import {renderLogo} from "./menu.js";
+import {renderLogo} from "./home.js";
 
 // createHtmlElement("type", "content", [classes], "id")
 
 function renderAboutus() {    
-    $content.innerHTML = ""; // Clear content div
-    renderLogo();    
+    renderLogo(true);    
 
-    const h1text = "Hi, I'm Steve!"
+    const h1 = "Hi, I'm Steve!"
     const p1HTML = `I'm not a professional chef, but I am an \
     ✨<span class='rainbow-text'>aspiring web developer</span>✨! \
     This may not be a real catering business, \
@@ -45,9 +44,9 @@ function renderAboutus() {
         </li>`
 
     const $bio = createHtmlElement("div", undefined, undefined, "bio");
-    const $h1 = createHtmlElement("h1", h1text);
+    const $h1 = createHtmlElement("h1", h1);
     const $p1 = createHtmlElement("p");
-    const $p2 = createHtmlElement("p", p2text); // These two elements don't contain any HTML
+    const $p2 = createHtmlElement("p", p2text);
     const $p3 = createHtmlElement("p", p3text);
     const $list = createHtmlElement("ul");
 
@@ -63,4 +62,4 @@ function renderAboutus() {
     $content.appendChild($bio);
 }
 
-export {renderAboutus};
+export { renderAboutus };
