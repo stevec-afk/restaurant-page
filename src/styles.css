@@ -24,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 body::before {
     content: '';
     position: absolute;
@@ -101,7 +102,6 @@ nav button:hover {
         font-size: .5em;
         &.small {
             font-size: .25em;
-            /* border-bottom: none; */
         }
     }
     & > p {
@@ -152,6 +152,10 @@ nav button:hover {
 
 /* About Us styles */
 
+a {
+    color: white;
+}
+
 #bio {
     display: flex;
     flex-direction: column;
@@ -173,13 +177,10 @@ nav button:hover {
         line-height: 150%;
     }
 
+    /* changes the color of the dot markers in the list */
     & > ul ::marker {
         color: #CCAB5B;
     }
-}
-
-a {
-    color: white;
 }
 
 /* Totally unnecesary rainbow animation */
@@ -204,15 +205,14 @@ a {
 
 #contact-container {
     display: flex;
-    /* flex-direction: column; */
     font-size: 1em;
     margin-top: 2em;
-
 
     & > * {
         margin: 40px;
     }
 }
+
 .contact {
     text-align: left;
     font-weight: 500;
@@ -240,4 +240,3 @@ a {
         color: black;
     }
 }
-
