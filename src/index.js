@@ -13,7 +13,7 @@ function createHtmlElement (type, content, classes, id){
     const element = document.createElement(type);
     if (content) element.innerText = content;
     if (id) element.id = id;
-    if (classes) classes.forEach((myClass) => element.classList.add(myClass));
+    if (classes) classes.forEach((myClass) => element.className = myClass);
     
     return element;
 }

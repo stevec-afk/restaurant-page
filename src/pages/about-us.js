@@ -4,6 +4,9 @@ import {renderLogo} from "./menu.js";
 // createHtmlElement("type", "content", [classes], "id")
 
 function renderAboutus() {    
+    $content.innerHTML = ""; // Clear content div
+    renderLogo();    
+
     const h1text = "Hi, I'm Steve!"
     const p1HTML = `I'm not a professional chef, but I am an \
     ✨<span class='rainbow-text'>aspiring web developer</span>✨! \
@@ -51,9 +54,6 @@ function renderAboutus() {
     // This use of .innerHTML only safe because we are using static content (no user input)
     $p1.innerHTML = p1HTML;
     $list.innerHTML = listHTML;
-
-    $content.innerHTML = ""; // Clear content div
-    renderLogo();    
 
     $bio.appendChild($h1);
     $bio.appendChild($p1);

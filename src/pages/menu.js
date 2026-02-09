@@ -31,10 +31,10 @@ function renderLogo() {
 }
 
 function renderMenu() {
-    const $menu = createHtmlElement("div", undefined, undefined, "menu")
-
     $content.innerHTML = ""; // Clear content div
     renderLogo(); 
+
+    const $menu = createHtmlElement("div", undefined, undefined, "menu")
 
     menu.forEach((item) => {
         const $div = createHtmlElement("div", undefined, ["menu-item"]);

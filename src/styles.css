@@ -204,21 +204,22 @@ a {
 
 #contact-container {
     display: flex;
+    /* flex-direction: column; */
     font-size: 1em;
     margin-top: 2em;
 
 
     & > * {
-        margin: 25px;
+        margin: 40px;
     }
 }
-.contact-section {
+.contact {
     text-align: left;
     font-weight: 500;
     font-size: 1.3rem;
 
     & > h1 {
-        letter-spacing: .1em;    
+        letter-spacing: .05em;    
         margin-bottom: .5em;
     }
 
